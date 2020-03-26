@@ -96,6 +96,36 @@ function viewEntry(){
         })
 }
 
+//Prompt user to add entry
+function addEntry(){
+    inquirer
+        .prompt([
+            {
+                name: "userAdd",
+                type: "list",
+                message: "Pick an option to add",
+                choices: ["Add a department", "Add an employee", "Add a job role", "Return to menu"]
+            }
+        ])
+        .then(answer => {
+            if (answer.userAdd === "Add a department"){
+                addDepartment();
+            }
+            else if (answer.userAdd === "Add an employee"){
+                addEmployee();
+            }
+            else if (answer.userAdd === "Add a job role"){
+                addRole();
+            }
+            else if (answer.userAdd === "Return to menu"){
+                initiate();
+            }
+            else{
+                connection.end();
+            }
+        })
+}
+
 //Prompt user to update entry
 function updateEntry(){
     inquirer
