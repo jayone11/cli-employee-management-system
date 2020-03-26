@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/jayone11/cli-employee-management-system/issues"
   },
-  "homepage": "https://github.com/jayone11/cli-employee-management-system#readme"
+  "homepage": "https://github.com/jayone11/cli-employee-management-system#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "figlet": "^1.3.0",
+    "inquirer": "^7.1.0",
+    "mysql": "^2.18.1",
+    "util": "^0.12.2"
+  }
 }
