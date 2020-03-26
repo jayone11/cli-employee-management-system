@@ -4,3 +4,27 @@ const clear = require("clear");
 const chalk = require("chalk");
 const util = require("util");
 const mysql = require("mysql");
+
+//Connect to the database
+const connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "gojila1171",
+    database: "employee_template_db"
+});
+connection.connect(function(err) {
+    if (err) throw err;
+
+    //Initiates the clear function
+    clear();
+
+    //Produces the ASCII art
+    console.log(chalk.blue(cliArt.textSync('Employee Management', {horizontalLayout: 'fitted'})));
+    console.log("\n");
+
+    //Calls the initiate function
+    initiate();
+});
+
+connection.query = util.promisify(connection.query);
