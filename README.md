@@ -1,7 +1,4 @@
 # cli-employee-management-system
-cli employee management system
-
-# CLI Employee Management System
 
 ## Instructions
 1) Clone repo to your local machine
