@@ -1,0 +1,19 @@
+{
+  "name": "cli-employee-management-system",
+  "version": "1.0.0",
+  "description": "CLI Employee Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayone11/cli-employee-management-system.git"
+  },
+  "author": "Jeff B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayone11/cli-employee-management-system/issues"
+  },
+  "homepage": "https://github.com/jayone11/cli-employee-management-system#readme"
+}
