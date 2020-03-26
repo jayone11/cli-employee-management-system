@@ -28,3 +28,30 @@ connection.connect(function(err) {
 });
 
 connection.query = util.promisify(connection.query);
+
+//Initiate questions
+function initiate(){
+    inquirer
+        .prompt([
+            {
+            name: "userSelect",
+            type: "list",
+            message: "Pick an option.",
+            choices: ["View entry", "Add entry", "Update entry", "Exit"]
+            }
+        ])
+        .then(answer => {
+            if (answer.userSelect === "View entry"){
+                viewEntry();
+            }
+            else if (answer.userSelect === "Add entry"){
+                addEntry();
+            }
+            else if (answer.userSelect === "Update entry"){
+                updateEntry();
+            }
+            else if (answer.userSelect === "Exit"){
+                endProgram();
+            }
+    });
+}
